@@ -1,0 +1,969 @@
+/* Component Styles for Homeless Dog Adoption Website */
+/* Adoption Page Components */
+
+/* Process Steps */
+.process-section {
+    padding: 80px 0;
+    background-color: #fafafa;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.step {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.step-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: lowercase;
+}
+
+.step-description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Apply Section */
+.apply-section {
+    text-align: center;
+}
+
+.apply-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    gap: 15px;
+    min-width: 200px;
+}
+
+.apply-button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.apply-button:hover .button-arrow {
+    transform: translateX(5px);
+}
+
+/* Filter Section */
+.filter-section {
+    padding: 60px 0 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-title {
+    font-size: 24px;
+    font-weight: 300;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    color: #333;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 150px;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+    border-color: #333;
+    outline: none;
+}
+
+/* Dogs Grid */
+.dogs-section {
+    padding: 60px 0 100px;
+}
+
+.dogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.dog-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dog-image {
+    width: 100%;
+    height: 250px;
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.dog-info {
+    padding: 25px;
+}
+
+.dog-name {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: lowercase;
+}
+
+.dog-details {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.dog-description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+/* Loading and Error States */
+.loading {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    padding: 60px 0;
+    grid-column: 1 / -1;
+}
+
+.error-message {
+    text-align: center;
+    color: #666;
+    padding: 60px 20px;
+    grid-column: 1 / -1;
+}
+
+.error-message p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.retry-button {
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+}
+
+.retry-button:hover {
+    background-color: #555;
+    transform: translateY(-1px);
+}
+
+.no-updates,
+.no-results {
+    text-align: center;
+    color: #666;
+    padding: 60px 20px;
+    grid-column: 1 / -1;
+}
+
+.no-updates p,
+.no-results p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: 300;
+    color: #999;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal-body {
+    padding: 40px;
+}
+
+/* Donation Page Components */
+.donation-hero {
+    padding: 80px 0 60px;
+    text-align: center;
+}
+
+.donation-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    letter-spacing: -0.5px;
+}
+
+.donation-subtitle {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Impact Section */
+.impact-section {
+    padding: 60px 0;
+    background-color: #fafafa;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.impact-item {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.impact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.impact-amount {
+    font-size: 36px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.impact-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: lowercase;
+}
+
+.impact-description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Amount Selection */
+.amount-section {
+    padding: 80px 0 60px;
+    text-align: center;
+}
+
+.amount-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.amount-button {
+    padding: 15px 30px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 80px;
+}
+
+.amount-button:hover,
+.amount-button.active {
+    border-color: #333;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.custom-amount {
+    position: relative;
+}
+
+.custom-amount input {
+    padding: 15px 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #333;
+    width: 180px;
+    text-align: center;
+}
+
+.custom-amount input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.selected-amount {
+    font-size: 20px;
+    color: #333;
+    margin: 20px 0;
+}
+
+.amount-label {
+    color: #666;
+    margin-right: 10px;
+}
+
+.amount-value {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Payment Section */
+.payment-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.payment-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 50px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    gap: 15px;
+    min-width: 250px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.payment-button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.payment-button:hover .button-arrow {
+    transform: translateX(5px);
+}
+
+.payment-note {
+    font-size: 14px;
+    color: #666;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Thanks Section */
+.thanks-section {
+    padding: 80px 0 100px;
+    text-align: center;
+}
+
+.thanks-text {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* About Page Components */
+.about-hero {
+    padding: 80px 0 60px;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    letter-spacing: -0.5px;
+}
+
+.about-subtitle {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Story Section */
+.story-section {
+    padding: 60px 0;
+    background-color: #fafafa;
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 80px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: #666;
+    text-transform: lowercase;
+}
+
+/* Team Section */
+.team-section {
+    padding: 80px 0;
+    background-color: #fafafa;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.member-name {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 8px;
+    text-transform: lowercase;
+}
+
+.member-id {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.member-role {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    text-transform: lowercase;
+    font-weight: 500;
+}
+
+.member-bio {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-item h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 8px;
+    text-transform: lowercase;
+}
+
+.contact-item p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-form {
+    background: #fafafa;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.contact-form h4 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 25px;
+    text-transform: lowercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.contact-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+}
+
+.contact-submit:hover {
+    background-color: #555;
+}
+
+/* Application Page Components */
+.application-hero {
+    padding: 80px 0 60px;
+    text-align: center;
+}
+
+.application-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    letter-spacing: -0.5px;
+}
+
+.application-subtitle {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Form Section */
+.form-section {
+    padding: 60px 0 100px;
+}
+
+.adoption-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 60px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+}
+
+.form-group {
+    margin-bottom: 50px;
+}
+
+.form-section-title {
+    font-size: 24px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    text-transform: lowercase;
+    font-weight: 400;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #999;
+}
+
+.form-field select {
+    cursor: pointer;
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Form Submit */
+.form-submit {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 50px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    gap: 15px;
+    min-width: 250px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button:hover:not(:disabled) .button-arrow {
+    transform: translateX(5px);
+}
+
+.submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.submit-note {
+    font-size: 14px;
+    color: #666;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .filters {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dogs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .amount-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .donation-title,
+    .about-title,
+    .application-title {
+        font-size: 36px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* Application Form Mobile */
+    .adoption-form {
+        padding: 40px 30px;
+        margin: 0 20px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .form-section-title {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Styles - 480px and below */
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .team-member {
+        padding: 30px 20px;
+    }
+    
+    .member-photo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+    
+    .member-name {
+        font-size: 18px;
+    }
+    
+    .member-id {
+        font-size: 13px;
+    }
+    
+    .member-role {
+        font-size: 13px;
+    }
+    
+    .member-bio {
+        font-size: 14px;
+    }
+} 

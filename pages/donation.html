@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation - Homeless Dog Adoption</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>Homeless Dog Adoption</h1>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="adoption.html">Adoption</a>
+                <a href="donation.html">Donation</a>
+                <a href="about.html">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Donation Hero Section -->
+        <section class="donation-hero">
+            <div class="container">
+                <h2 class="donation-title">help us save more lives</h2>
+                <p class="donation-subtitle">
+                    your donation directly supports the rescue, care, and rehabilitation of homeless dogs
+                </p>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="impact-section">
+            <div class="container">
+                <h3 class="section-title">where your money goes</h3>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <div class="impact-amount">$25</div>
+                        <h4 class="impact-title">provides food for one week</h4>
+                        <p class="impact-description">covers nutritious meals for a medium-sized dog for seven days</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-amount">$75</div>
+                        <h4 class="impact-title">covers medical check-up</h4>
+                        <p class="impact-description">includes vaccination, health screening, and basic veterinary care</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-amount">$150</div>
+                        <h4 class="impact-title">full month of care</h4>
+                        <p class="impact-description">complete care package including food, shelter, and medical needs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donation Amount Selection -->
+        <section class="amount-section">
+            <div class="container">
+                <h3 class="section-title">choose your donation amount</h3>
+                <div class="amount-options">
+                    <button class="amount-button" data-amount="25">$25</button>
+                    <button class="amount-button" data-amount="50">$50</button>
+                    <button class="amount-button active" data-amount="75">$75</button>
+                    <button class="amount-button" data-amount="150">$150</button>
+                    <div class="custom-amount">
+                        <input type="number" id="customAmount" placeholder="custom amount" min="1" step="1">
+                    </div>
+                </div>
+                
+                <div class="selected-amount">
+                    <span class="amount-label">donation amount:</span>
+                    <span class="amount-value" id="selectedAmount">$75</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proceed to Payment Section -->
+        <section class="payment-section">
+            <div class="container">
+                <button class="payment-button" id="proceedToPayment">
+                    <span class="button-text">proceed to payment</span>
+                    <span class="button-arrow">→</span>
+                </button>
+                <p class="payment-note">
+                    you will be redirected to our secure payment processor to complete your donation
+                </p>
+            </div>
+        </section>
+
+        <!-- Thank You Section -->
+        <section class="thanks-section">
+            <div class="container">
+                <h3 class="section-title">thank you for caring</h3>
+                <p class="thanks-text">
+                    every donation, no matter the size, makes a real difference in the lives of homeless dogs. 
+                    your support helps us provide shelter, food, medical care, and love until each dog finds their forever home.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 homeless dog adoption. all rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/donation.js"></script>
+</body>
+</html> 

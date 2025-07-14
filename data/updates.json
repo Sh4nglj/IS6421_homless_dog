@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "date": "january 2025",
+    "title": "15 dogs found homes this month",
+    "description": "thanks to our amazing community, we successfully placed 15 dogs into loving families during january.",
+    "type": "success",
+    "priority": 1
+  },
+  {
+    "id": 2,
+    "date": "december 2024",
+    "title": "bella's success story",
+    "description": "after 8 months in our care, bella found her perfect family. she now enjoys daily walks and has a backyard to play in.",
+    "type": "story",
+    "priority": 2
+  },
+  {
+    "id": 3,
+    "date": "november 2024",
+    "title": "new partnership with local vet clinic",
+    "description": "we've partnered with downtown veterinary clinic to provide better healthcare for all our rescue dogs.",
+    "type": "news",
+    "priority": 3
+  },
+  {
+    "id": 4,
+    "date": "october 2024",
+    "title": "fundraising goal achieved",
+    "description": "we reached our $10,000 fundraising goal ahead of schedule, enabling us to expand our rescue capacity.",
+    "type": "achievement",
+    "priority": 4
+  },
+  {
+    "id": 5,
+    "date": "september 2024",
+    "title": "volunteer appreciation event",
+    "description": "celebrating our incredible volunteers who make our mission possible. their dedication continues to inspire us.",
+    "type": "event",
+    "priority": 5
+  }
+] 

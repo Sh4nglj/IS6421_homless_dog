@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Application - Homeless Dog Adoption</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>Homeless Dog Adoption</h1>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="adoption.html">Adoption</a>
+                <a href="donation.html">Donation</a>
+                <a href="about.html">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Application Hero Section -->
+        <section class="application-hero">
+            <div class="container">
+                <h2 class="application-title">adoption application</h2>
+                <p class="application-subtitle">
+                    help us find the perfect match by providing some information about yourself and your home
+                </p>
+            </div>
+        </section>
+
+        <!-- Application Form Section -->
+        <section class="form-section">
+            <div class="container">
+                <form id="adoptionForm" class="adoption-form">
+                    <!-- Personal Information -->
+                    <div class="form-group">
+                        <h3 class="form-section-title">personal information</h3>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="firstName">first name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="lastName">last name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="email">email address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="phone">phone number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="address">home address *</label>
+                            <textarea id="address" name="address" rows="3" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Housing Information -->
+                    <div class="form-group">
+                        <h3 class="form-section-title">housing information</h3>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="housingType">type of home *</label>
+                                <select id="housingType" name="housingType" required>
+                                    <option value="">select one</option>
+                                    <option value="house">house</option>
+                                    <option value="apartment">apartment</option>
+                                    <option value="condo">condo</option>
+                                    <option value="townhouse">townhouse</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="ownership">do you own or rent? *</label>
+                                <select id="ownership" name="ownership" required>
+                                    <option value="">select one</option>
+                                    <option value="own">own</option>
+                                    <option value="rent">rent</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="yard">describe your yard/outdoor space</label>
+                            <textarea id="yard" name="yard" rows="3" placeholder="fenced backyard, balcony, no outdoor space, etc."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Pet Experience -->
+                    <div class="form-group">
+                        <h3 class="form-section-title">pet experience</h3>
+                        <div class="form-field">
+                            <label for="currentPets">do you currently have pets?</label>
+                            <textarea id="currentPets" name="currentPets" rows="3" placeholder="describe any current pets, their ages, breeds, and temperaments"></textarea>
+                        </div>
+                        <div class="form-field">
+                            <label for="petExperience">previous experience with dogs</label>
+                            <textarea id="petExperience" name="petExperience" rows="3" placeholder="describe your experience with dogs, training, etc."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Preferences -->
+                    <div class="form-group">
+                        <h3 class="form-section-title">dog preferences</h3>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="preferredSize">preferred size</label>
+                                <select id="preferredSize" name="preferredSize">
+                                    <option value="">no preference</option>
+                                    <option value="small">small (under 25 lbs)</option>
+                                    <option value="medium">medium (25-60 lbs)</option>
+                                    <option value="large">large (over 60 lbs)</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="preferredAge">preferred age</label>
+                                <select id="preferredAge" name="preferredAge">
+                                    <option value="">no preference</option>
+                                    <option value="puppy">puppy (under 1 year)</option>
+                                    <option value="young">young (1-3 years)</option>
+                                    <option value="adult">adult (3-7 years)</option>
+                                    <option value="senior">senior (over 7 years)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="specificDog">interested in a specific dog?</label>
+                            <input type="text" id="specificDog" name="specificDog" placeholder="enter dog's name if you have one in mind">
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-group">
+                        <h3 class="form-section-title">additional information</h3>
+                        <div class="form-field">
+                            <label for="lifestyle">describe your lifestyle and daily routine</label>
+                            <textarea id="lifestyle" name="lifestyle" rows="4" placeholder="work schedule, activity level, family situation, etc." required></textarea>
+                        </div>
+                        <div class="form-field">
+                            <label for="commitment">why do you want to adopt a dog?</label>
+                            <textarea id="commitment" name="commitment" rows="4" placeholder="what are you looking for in a companion?" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- References -->
+                    <div class="form-group">
+                        <h3 class="form-section-title">references</h3>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="refName">reference name</label>
+                                <input type="text" id="refName" name="refName" placeholder="name of someone who can vouch for your character">
+                            </div>
+                            <div class="form-field">
+                                <label for="refPhone">reference phone</label>
+                                <input type="tel" id="refPhone" name="refPhone" placeholder="reference phone number">
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="vetReference">veterinarian reference (if applicable)</label>
+                            <input type="text" id="vetReference" name="vetReference" placeholder="name and phone of your current or previous vet">
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-submit">
+                        <button type="submit" class="submit-button">
+                            <span class="button-text">submit application</span>
+                            <span class="button-arrow">→</span>
+                        </button>
+                        <p class="submit-note">
+                            we'll review your application and contact you within 2-3 business days
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 homeless dog adoption. all rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Simple form validation and submission
+        document.getElementById('adoptionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitButton = document.querySelector('.submit-button');
+            const originalText = submitButton.innerHTML;
+            
+            submitButton.innerHTML = '<span class="button-text">submitting...</span>';
+            submitButton.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Show success message
+                showApplicationSuccess();
+                
+                // Reset button after delay
+                setTimeout(() => {
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                }, 2000);
+            }, 2000);
+        });
+
+        function showApplicationSuccess() {
+            const successHTML = `
+                <div class="modal" id="successModal" style="display: block;">
+                    <div class="modal-content" style="max-width: 500px; text-align: center;">
+                        <span class="close" onclick="closeSuccessModal()">&times;</span>
+                        <div class="modal-body">
+                            <h2 style="font-size: 28px; font-weight: 300; color: #333; margin-bottom: 20px; text-transform: lowercase;">application submitted!</h2>
+                            <p style="font-size: 18px; color: #666; margin-bottom: 30px;">
+                                thank you for your interest in adopting. we'll review your application and contact you within 2-3 business days.
+                            </p>
+                            <p style="font-size: 16px; color: #666; margin-bottom: 30px;">
+                                this is a demonstration website. no actual application has been submitted.
+                            </p>
+                            <button onclick="closeSuccessModal()" class="payment-button" style="background-color: #333; color: white; border: none; padding: 15px 30px; border-radius: 8px; font-size: 16px; cursor: pointer;">
+                                close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', successHTML);
+        }
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('successModal');
+            if (modal) {
+                modal.remove();
+            }
+        }
+
+        // Make function globally available
+        window.closeSuccessModal = closeSuccessModal;
+    </script>
+</body>
+</html> 

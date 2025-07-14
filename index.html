@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeless Dog Adoption</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>homeless dog adoption</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">home</a>
+                <a href="pages/adoption.html">adoption</a>
+                <a href="pages/donation.html">donation</a>
+                <a href="pages/about.html">about</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Brief Organization Introduction -->
+        <section class="intro-section">
+            <div class="container">
+                <h2 class="intro-title">finding homes for every homeless dog</h2>
+                <p class="intro-text">
+                    we connect loving families with dogs in need of homes. 
+                    every adoption creates space to save another life.
+                </p>
+            </div>
+        </section>
+
+        <!-- Large Adoption Button -->
+        <section class="action-section">
+            <div class="container">
+                <a href="pages/adoption.html" class="adoption-button">
+                    <span class="button-text">adopt a dog</span>
+                    <span class="button-arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Recent Updates -->
+        <section class="updates-section">
+            <div class="container">
+                <h3 class="section-title">recent updates</h3>
+                <div class="updates-grid" id="updatesGrid">
+                    <!-- Updates will be loaded dynamically from data/updates.json -->
+                    <div class="loading">loading updates...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 homeless dog adoption. all rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
