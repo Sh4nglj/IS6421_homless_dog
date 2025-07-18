@@ -94,9 +94,14 @@ function createDogCard(dog) {
     if (dog.good_with_dogs) goodWithIcons.push('🐕 dogs');
     if (dog.good_with_cats) goodWithIcons.push('🐱 cats');
     
+    let imagePath = '';
+    if (dog.image !== 'placeholder') {
+        imagePath = dog.image.startsWith('images/') ? '../' + dog.image : dog.image;
+    }
+    
     return `
         <div class="dog-card" data-dog-id="${dog.id}">
-            <div class="dog-image" style="background-image: url('${dog.image !== 'placeholder' ? dog.image : ''}')">
+            <div class="dog-image" style="background-image: url('${imagePath}')">
                 ${dog.image === 'placeholder' ? 'photo coming soon' : ''}
             </div>
             <div class="dog-info">
@@ -189,8 +194,15 @@ function showDogModal(dog) {
     if (dog.good_with_dogs) goodWithList.push('other dogs');
     if (dog.good_with_cats) goodWithList.push('cats');
     
+    // Fix image path for pages subfolder
+    let imagePath = '';
+    if (dog.image !== 'placeholder') {
+        // Add ../ prefix since adoption.html is in pages/ folder
+        imagePath = dog.image.startsWith('images/') ? '../' + dog.image : dog.image;
+    }
+    
     const modalContent = `
-        <div class="modal-dog-image" style="background-image: url('${dog.image !== 'placeholder' ? dog.image : ''}'); height: 300px; background-size: cover; background-position: center; border-radius: 8px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; color: #999; background-color: #f0f0f0;">
+        <div class="modal-dog-image" style="background-image: url('${imagePath}'); height: 300px; background-size: cover; background-position: center; border-radius: 8px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; color: #999; background-color: #f0f0f0;">
             ${dog.image === 'placeholder' ? 'photo coming soon' : ''}
         </div>
         <h2 class="modal-dog-name" style="font-size: 32px; font-weight: 300; color: #333; margin-bottom: 20px; text-transform: lowercase;">${dog.name}</h2>
