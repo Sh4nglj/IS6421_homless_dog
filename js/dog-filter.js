@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadDogs();
     initFilters();
     initModal();
+    initDogCardEvents();
 });
 
 /**
@@ -65,21 +66,12 @@ function displayDogs(dogs) {
     const dogsHTML = dogs.map(dog => createDogCard(dog)).join('');
     dogsGrid.innerHTML = dogsHTML;
     
-    // Add click event listeners to dog cards
+    // Set accessibility attributes
     const dogCards = dogsGrid.querySelectorAll('.dog-card');
     dogCards.forEach((card, index) => {
-        card.addEventListener('click', () => showDogModal(dogs[index]));
-        card.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                showDogModal(dogs[index]);
-            }
-        });
-        
-        // Make cards keyboard accessible
         card.setAttribute('tabindex', '0');
         card.setAttribute('role', 'button');
-        card.setAttribute('aria-label', `view details for ${dog.name}`);
+        card.setAttribute('aria-label', `view details for ${dogs[index].name}`);
     });
 }
 
@@ -293,3 +285,31 @@ function searchDogs(searchTerm) {
 
 // Make functions available globally if needed
 window.DogAdoption.searchDogs = searchDogs; 
+
+function initDogCardEvents() {
+    const dogsGrid = document.getElementById('dogsGrid');
+    dogsGrid.addEventListener('click', handleDogCardClick);
+    dogsGrid.addEventListener('keydown', handleDogCardKeydown);
+}
+
+function handleDogCardClick(e) {
+    const card = e.target.closest('.dog-card');
+    if (!card) return;
+    const dogId = card.dataset.dogId;
+    const dog = filteredDogs.find(d => d.id === parseInt(dogId));
+    if (dog) {
+        showDogModal(dog);
+    }
+}
+
+function handleDogCardKeydown(e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const card = e.target.closest('.dog-card');
+    if (!card) return;
+    e.preventDefault();
+    const dogId = card.dataset.dogId;
+    const dog = filteredDogs.find(d => d.id === parseInt(dogId));
+    if (dog) {
+        showDogModal(dog);
+    }
+} 
